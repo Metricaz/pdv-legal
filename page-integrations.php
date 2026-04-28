@@ -19,7 +19,45 @@
             
             <div id="orbit-inner" class="orbit-container orbit-ccw"></div>
         </div>
-
     </section>
+    <section class="cards-integrations">
+        <?php get_template_part('components/card_integration', null, [
+            'title' => 'Delivery VIP',
+            'description' => 'Integre o Delivery VIP ao PDV Legal para receber pedidos, gerenciar cardápio digital, autoatendimento (mesa e QR Code) e BOT de atendimento na mesma operação.',
+            'image' => '/assets/images/integration/img-integration.png',
+            'segment' => 'Delivery'
+        ]); ?>
+        <?php get_template_part('components/card_integration', null, [
+            'title' => 'Delivery VIP',
+            'description' => 'Integre o Delivery VIP ao PDV Legal para receber pedidos, gerenciar cardápio digital, autoatendimento (mesa e QR Code) e BOT de atendimento na mesma operação.',
+            'image' => '/assets/images/integration/img-integration.png',
+            'segment' => 'Delivery'
+        ]); ?>
+        <?php get_template_part('components/card_integration', null, [
+            'title' => 'Delivery VIP',
+            'description' => 'Integre o Delivery VIP ao PDV Legal para receber pedidos, gerenciar cardápio digital, autoatendimento (mesa e QR Code) e BOT de atendimento na mesma operação.',
+            'image' => '/assets/images/integration/img-integration.png',
+            'segment' => 'Delivery'
+        ]); ?>
+        <?php get_template_part('components/card_integration', null, [
+            'title' => 'Delivery VIP',
+            'description' => 'Integre o Delivery VIP ao PDV Legal para receber pedidos, gerenciar cardápio digital, autoatendimento (mesa e QR Code) e BOT de atendimento na mesma operação.',
+            'image' => '/assets/images/integration/img-integration.png',
+            'segment' => 'Delivery'
+        ]); ?>
+        <?php get_template_part('components/card_integration', null, [
+            'title' => 'Delivery VIP',
+            'description' => 'Integre o Delivery VIP ao PDV Legal para receber pedidos, gerenciar cardápio digital, autoatendimento (mesa e QR Code) e BOT de atendimento na mesma operação.',
+            'image' => '/assets/images/integration/img-integration.png',
+            'segment' => 'Delivery'
+        ]); ?>
+        <?php get_template_part('components/card_integration', null, [
+            'title' => 'Delivery VIP',
+            'description' => 'Integre o Delivery VIP ao PDV Legal para receber pedidos, gerenciar cardápio digital, autoatendimento (mesa e QR Code) e BOT de atendimento na mesma operação.',
+            'image' => '/assets/images/integration/img-integration.png',
+            'segment' => 'Delivery'
+        ]); ?>
+    </section>
+    <?php get_template_part('components/form_footer', null, ['hasBackground' => false]); ?>
 </main>
 <?php get_footer(); ?>

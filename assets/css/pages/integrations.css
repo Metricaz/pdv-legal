@@ -1,0 +1,14 @@
+.cards-integrations {
+    max-width: 1220px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    gap: 28px;
+}
+
+@media (max-width: 768px) {
+    .cards-integrations {
+        padding: 0 24px;
+        grid-template-columns: 1fr;
+    }
+}

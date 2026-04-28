@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/home.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/solutions.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/cases.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/integrations.css">
     <?php
       if(get_post_field('post_name', get_post()) === 'solutions') {
         echo '<script type="text/javascript" src="'.get_template_directory_uri().'/assets/js/solutions.js"></script>';

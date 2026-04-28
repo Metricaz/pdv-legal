@@ -611,6 +611,34 @@ p {
   justify-content: space-between;
 }
 
+.container-card-integration {
+  max-width: 388px;
+  border-radius: 24px;
+  padding: 24px;
+  background-color: var(--color-background-soft);
+  box-shadow: 3px 3px 20px #00000038;
+}
+
+.content-card-infos {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.segment-card-integration {
+  background-color: var(--color-primary-light);
+  color: var(--color-background-base);
+  width: max-content;
+  border-radius: 6px;
+  padding: 3px;
+  font-size: 10px;
+}
+
+.description-card-integration {
+  font-size: 14px;
+}
+
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .header-container {
@@ -730,145 +758,181 @@ p {
 }
 
 /* //////// */
-/* Container principal */
-/* Container principal */
-/* Seção principal que ocupa a primeira dobra */
-        .hero-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-            box-sizing: border-box;
-        }
 
-        /* Textos do cabeçalho */
-        .header-text {
-            text-align: center;
-            margin-bottom: 40px;
-            z-index: 10;
-        }
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-        .header-text h1 {
-            color: #212529;
-            font-size: 32px;
-            font-weight: 700;
-            margin: 0 0 12px 0;
-            letter-spacing: -0.5px;
-        }
+.header-text {
+  text-align: center;
+  margin-bottom: 40px;
+  z-index: 10;
+}
 
-        .header-text p {
-            color: #6c757d;
-            font-size: 15px;
-            margin: 0 auto;
-            max-width: 400px;
-            line-height: 1.5;
-        }
+.header-text h1 {
+  color: #212529;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+}
 
-        /* Container do Ecossistema (Reduzido para caber na tela) */
-        .ecosystem-container {
-            position: relative;
-            width: 500px; /* Reduzido de 700px */
-            height: 500px; /* Reduzido de 700px */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+.header-text p {
+  color: #6c757d;
+  font-size: 15px;
+  margin: 0 auto;
+  max-width: 400px;
+  line-height: 1.5;
+}
 
-        /* Brilho azul no centro */
-        .glow-center {
-            position: absolute;
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(180, 210, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
-            z-index: 0;
-            pointer-events: none;
-        }
+.ecosystem-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-        /* Estilo das linhas das órbitas */
-        .orbit-ring {
-            position: absolute;
-            border-radius: 50%;
-            border: 2px solid rgba(0, 0, 0, 0.03);
-            z-index: 1;
-            pointer-events: none;
-        }
+  margin-top: -125px;
+  margin-bottom: -125px;
+}
 
-        /* Tamanhos ajustados das órbitas */
-        .orbit-outer-ring { width: 420px; height: 420px; }
-        .orbit-inner-ring { width: 240px; height: 240px; }
+.glow-center {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(180, 210, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+  z-index: 0;
+  pointer-events: none;
+}
 
-        /* Contêineres giratórios invisíveis */
-        .orbit-container {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-        }
+.orbit-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.03);
+  z-index: 1;
+  pointer-events: none;
+}
 
-        /* Animações das órbitas */
-        .orbit-cw { animation: spin-cw 45s linear infinite; }
-        .orbit-ccw { animation: spin-ccw 30s linear infinite; }
+.orbit-outer-ring {
+  width: 420px;
+  height: 420px;
+}
 
-        @keyframes spin-cw { 100% { transform: rotate(360deg); } }
-        @keyframes spin-ccw { 100% { transform: rotate(-360deg); } }
+.orbit-inner-ring {
+  width: 240px;
+  height: 240px;
+}
 
-        /* Wrapper do cartão */
-        .card-wrapper {
-            position: absolute;
-            z-index: 2;
-            pointer-events: auto;
-        }
+.orbit-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
 
-        /* Contra-rotações para manter o cartão em pé */
-        .counter-cw { animation: counter-spin-cw 45s linear infinite; }
-        .counter-ccw { animation: counter-spin-ccw 30s linear infinite; }
+.orbit-cw {
+  animation: spin-cw 45s linear infinite;
+}
 
-        @keyframes counter-spin-cw {
-            from { transform: translate(-50%, -50%) rotate(0deg); }
-            to { transform: translate(-50%, -50%) rotate(-360deg); }
-        }
-        @keyframes counter-spin-ccw {
-            from { transform: translate(-50%, -50%) rotate(0deg); }
-            to { transform: translate(-50%, -50%) rotate(360deg); }
-        }
+.orbit-ccw {
+  animation: spin-ccw 30s linear infinite;
+}
 
-        /* Cartões ligeiramente reduzidos */
-        .card {
-            background: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 1);
-            border-radius: 14px;
-            padding: 8px;
-            width: 64px; /* Reduzido de 75px */
-            height: 64px; /* Reduzido de 75px */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 8px 20px rgba(0, 50, 150, 0.06);
-            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, background 0.3s ease;
-            cursor: pointer;
-        }
+@keyframes spin-cw {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
-        /* Efeito hover (aumentar) */
-        .card:hover {
-            transform: scale(1.15);
-            box-shadow: 0 12px 25px rgba(0, 50, 150, 0.12);
-            background: rgba(255, 255, 255, 0.95);
-        }
+@keyframes spin-ccw {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 
-        /* Ícones e textos ajustados */
-        .card .icon { font-size: 22px; margin-bottom: 2px; line-height: 1; }
-        .card .label { font-size: 10px; color: #4a5568; font-weight: 600; text-align: center; letter-spacing: -0.2px; }
+.card-wrapper {
+  position: absolute;
+  z-index: 2;
+  pointer-events: auto;
+}
 
-        /* PAUSAR animações no hover */
-        .ecosystem-container:has(.card:hover) .orbit-container,
-        .ecosystem-container:has(.card:hover) .card-wrapper {
-            animation-play-state: paused;
-        }
+.counter-cw {
+  animation: counter-spin-cw 45s linear infinite;
+}
+
+.counter-ccw {
+  animation: counter-spin-ccw 30s linear infinite;
+}
+
+@keyframes counter-spin-cw {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes counter-spin-ccw {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 14px;
+  padding: 8px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 50, 150, 0.06);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.15);
+  box-shadow: 0 12px 25px rgba(0, 50, 150, 0.12);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.card .icon {
+  font-size: 22px;
+  margin-bottom: 2px;
+  line-height: 1;
+}
+
+.card .label {
+  font-size: 10px;
+  color: #4a5568;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: -0.2px;
+}
+
+.ecosystem-container:has(.card:hover) .orbit-container,
+.ecosystem-container:has(.card:hover) .card-wrapper {
+  animation-play-state: paused;
+}
