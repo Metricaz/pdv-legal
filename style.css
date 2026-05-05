@@ -223,6 +223,21 @@ p {
   padding: 15px 20px;
 }
 
+/* Garante que os links do menu fiquem brancos */
+.header-home .menu-list ul li a {
+  color: #FFFFFF !important;
+}
+
+.header-home .menu-list-dark ul li a {
+  color: #FFFFFF !important;
+}
+
+/* Botão login fica branco com borda branca */
+.header-home .btn-outline {
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
 .btn-outline:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -935,4 +950,208 @@ p {
 .ecosystem-container:has(.card:hover) .orbit-container,
 .ecosystem-container:has(.card:hover) .card-wrapper {
   animation-play-state: paused;
+}
+
+
+
+/* ========== MENU MOBILE LINDÃO ========== */
+
+/* Esconde elementos desktop no mobile */
+@media (max-width: 768px) {
+  .logo-desktop {
+    display: none;
+  }
+  
+  .header-container .main-menu,
+  .header-container .header-actions {
+    display: none;
+  }
+  
+  .header-home-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 24px;
+    position: relative;
+    z-index: 1001;
+  }
+  
+  /* Botão menu toggle */
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .menu-toggle img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Menu mobile - versão melhorada */
+  .main-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 380px;
+    height: 100vh;
+    background: #0F172A;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+    padding: 100px 32px 40px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    overflow-y: auto;
+    display: block !important;
+  }
+  
+  .main-menu.active {
+    right: 0;
+  }
+  
+  /* Links do menu mobile */
+  .main-menu .menu-list,
+  .main-menu .menu-list-dark {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-menu .menu-list ul,
+  .main-menu .menu-list-dark ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px;
+  }
+  
+  .main-menu .menu-list ul li,
+  .main-menu .menu-list-dark ul li {
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .main-menu .menu-list ul li a,
+  .main-menu .menu-list-dark ul li a {
+    display: block;
+    padding: 16px 0;
+    color: #FFFFFF !important;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .main-menu .menu-list ul li a:hover,
+  .main-menu .menu-list-dark ul li a:hover {
+    color: #FACC15 !important;
+    padding-left: 8px;
+  }
+  
+  /* Botões no mobile */
+  .header-actions-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .header-actions-mobile .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .header-actions-mobile .btn-outline {
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+  }
+  
+  .header-actions-mobile .btn-outline-dark {
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+  }
+  
+  .header-actions-mobile .btn-primary {
+    background: #FACC15;
+    color: #0F172A;
+    border: none;
+  }
+  
+  /* Overlay escuro */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Remove scroll do body quando menu aberto */
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+/* Desktop - esconde botões mobile */
+@media (min-width: 769px) {
+  .header-home-mobile {
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Garante que o overlay funcione */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-menu {
+  transition: right 0.3s ease-in-out;
+}
+
+body.menu-open {
+  overflow: hidden;
 }
