@@ -94,7 +94,7 @@
       </div>
       <div class="button-view-solutions">
         <?php get_template_part('components/button', null, [
-          'url' => '/#',
+          'url' => '/solutions',
           'label' => 'Conheça as soluções →',
           'class' => 'btn-primary btn'
         ]); ?>

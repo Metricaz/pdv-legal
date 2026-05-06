@@ -7,7 +7,7 @@
                 <button class="business-tab active" data-tab="restaurantes">Restaurantes</button>
                 <button class="business-tab" data-tab="varejo">Varejo</button>
                 <button class="business-tab" data-tab="eventos">Eventos</button>
-                <button class="business-tab" data-tab="servicos">Serviços</button>
+                <button class="business-tab" data-tab="servicos">Franquias</button>
                 <div class="tab-underline"></div>
             </div>
         </div>
@@ -16,7 +16,7 @@
             <div class="business-content active" id="business-restaurantes">
                 <div class="business-content-inner">
                     <div class="business-image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/payment.png" alt="Restaurante">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/restaurant.png" alt="Restaurantes">
                     </div>
                     <div class="business-info">
                         <p class="business-description">O PDV Legal organiza o fluxo do seu restaurante, garantindo atendimento rápido, controle preciso dos pedidos e uma operação mais eficiente.</p>
@@ -38,7 +38,7 @@
             <div class="business-content" id="business-varejo">
                 <div class="business-content-inner">
                     <div class="business-image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/payment.png" alt="Varejo">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/retail.png" alt="Varejo">
                     </div>
                     <div class="business-info">
                         <p class="business-description">O PDV Legal torna o atendimento no varejo mais ágil e moderno, com opções de autoatendimento, frente de caixa eficiente, controle de estoque e recursos pensados para fortalecer o relacionamento com o cliente.</p>
@@ -60,7 +60,7 @@
             <div class="business-content" id="business-eventos">
                 <div class="business-content-inner">
                     <div class="business-image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/payment.png" alt="Eventos">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/events.png" alt="Eventos">
                     </div>
                     <div class="business-info">
                         <p class="business-description">O PDV Legal acompanha o ritmo dos eventos, garantindo vendas rápidas em momentos de alta demanda e controle total do faturamento.</p>
@@ -81,7 +81,7 @@
             <div class="business-content" id="business-servicos">
                 <div class="business-content-inner">
                     <div class="business-image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/payment.png" alt="Serviços">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/delivery.png" alt="Serviços">
                     </div>
                     <div class="business-info">
                         <p class="business-description">O PDV Legal atende redes e franquias, oferecendo padronização, controle por unidade e visão consolidada da operação.</p>
