@@ -54,9 +54,9 @@
                 </div>
             </div>
 
-            <!-- Coluna 2 - Soluções -->
+            <!-- Coluna 2 - PDV Legal -->
             <div class="footer-col">
-                <h4 class="footer-title">Soluções</h4>
+                <h4 class="footer-title">PDV Legal</h4>
                 <ul class="footer-links">
                     <li><a href="#">Soluções</a></li>
                     <li><a href="#">Modos de Uso</a></li>
@@ -66,9 +66,9 @@
                 </ul>
             </div>
 
-            <!-- Coluna 3 - Cases -->
+            <!-- Coluna 3 - Soluções -->
             <div class="footer-col">
-                <h4 class="footer-title">Cases</h4>
+                <h4 class="footer-title">Soluções</h4>
                 <ul class="footer-links">
                     <li><a href="#">Restaurantes</a></li>
                     <li><a href="#">Varejo</a></li>
@@ -78,9 +78,9 @@
                 </ul>
             </div>
 
-            <!-- Coluna 4 - Integrações -->
+            <!-- Coluna 4 - Cases -->
             <div class="footer-col">
-                <h4 class="footer-title">Integrações</h4>
+                <h4 class="footer-title">Cases</h4>
                 <ul class="footer-links">
                     <li><a href="#">Nossos Clientes</a></li>
                     <li><a href="#">Segmentos</a></li>
@@ -88,191 +88,27 @@
                 </ul>
             </div>
 
-            <!-- Coluna 5 - Empresa -->
+            <!-- Coluna 5 - Integrações -->
             <div class="footer-col">
-                <h4 class="footer-title">Empresa</h4>
+                <h4 class="footer-title">Integrações</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Lista completa</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Lista Completa</a></li>
                 </ul>
             </div>
 
-            <!-- Coluna 6 - Contato (opcional, pode adicionar mais links) -->
+            <!-- Coluna 6 - Empresa -->
             <div class="footer-col">
-                <h4 class="footer-title">Contato</h4>
+                <h4 class="footer-title">Empresa</h4>
                 <ul class="footer-links">
-                    <li><a href="mailto:contato@pdvlegal.com.br">contato@pdvlegal.com.br</a></li>
-                    <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+                    <li><a href="#">Sobre o PDV Legal</a></li>
+                    <li><a href="#">Contato</a></li>
                 </ul>
             </div>
         </div>
 
         <hr class="footer-divider" />
 
-        <p class="copy-right">Copyright © 2026 PDV Legal | Todos os direitos reservados.</p>
+        <p class="copy-right">Copyright © 2026 PDV Legal | All Rights Reserved.</p>
     </div>
 </footer>
 
-
-<style>
-
-
-/* ========== FOOTER ========== */
-.site-footer {
-    background: #d2d5e3;
-    padding: 60px 0 30px;
-    color: #94A3B8;
-}
-
-.container-footer {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 40px;
-    margin-bottom: 50px;
-}
-
-/* Coluna 1 - Logo e Redes Sociais */
-.footer-col-brand {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.footer-logo {
-    width: 140px;
-    height: auto;
-}
-
-.footer-social {
-    display: flex;
-    gap: 16px;
-}
-
-.social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 50%;
-    transition: all 0.3s ease;
-}
-
-.social-link:hover {
-    background: #161616;
-    transform: translateY(-3px);
-}
-
-.social-link img {
-    width: 20px;
-    height: 20px;
-    transition: all 0.3s ease;
-}
-
-.social-link:hover img {
-    filter: brightness(0) invert(1);
-}
-
-/* Títulos das colunas */
-.footer-title {
-    color: #161616;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    margin-bottom: 20px;
-    letter-spacing: 0.5px;
-}
-
-/* Listas de links */
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-links li {
-    margin-bottom: 12px;
-}
-
-.footer-links a {
-    color: #2C2E36;
-    text-decoration: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    transition: all 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #0a0a0a;
-    padding-left: 5px;
-}
-
-/* Divisória */
-.footer-divider {
-    border: none;
-    height: 1px;
-    background: #1E293B;
-    margin: 30px 0 20px;
-}
-
-/* Copyright */
-.copy-right {
-    text-align: center;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    color: #64748B;
-    margin: 0;
-}
-
-/* ========== RESPONSIVO FOOTER ========== */
-@media (max-width: 1024px) {
-    .footer-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
-    }
-    
-    .footer-col-brand {
-        grid-column: span 1;
-    }
-}
-
-@media (max-width: 768px) {
-    .site-footer {
-        padding: 40px 0 20px;
-    }
-    
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        margin-bottom: 30px;
-    }
-    
-    .footer-col-brand {
-        text-align: center;
-        align-items: center;
-    }
-    
-    .footer-title {
-        text-align: center;
-    }
-    
-    .footer-links {
-        text-align: center;
-    }
-    
-    .footer-links a:hover {
-        padding-left: 0;
-    }
-    
-    .copy-right {
-        font-size: 12px;
-    }
-}
-  </style>

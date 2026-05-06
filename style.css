@@ -131,11 +131,12 @@ p {
   display: block;
 }
 
-/* Menu */
+/* Menu - UNIFICADO (Desktop) */
 .main-menu {
   flex: 1;
   display: flex;
   justify-content: center;
+  transition: right 0.3s ease-in-out;
 }
 
 .menu-list ul {
@@ -289,9 +290,17 @@ p {
 }
 
 .form {
-  padding-top: 60px;
-  position: relative;
-  min-height: 100vh;
+    padding-top: 60px;
+    position: relative;
+    min-height: 100vh;
+    /* Fundo removido - será aplicado apenas no desktop via media query */
+}
+
+/* Desktop - mantém o fundo */
+@media (min-width: 769px) {
+    .form {
+        background-color: #D2D5E3;
+    }
 }
 
 .form-background {
@@ -684,24 +693,56 @@ p {
     align-items: center;
   }
 
+  /* MENU MOBILE - SOBRESCREVE O DESKTOP */
   .main-menu {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    display: none;
-    flex-direction: column;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    right: -100%;
+    left: auto !important;
+    width: 85%;
+    max-width: 380px;
+    height: 100vh;
+    background: #0F172A;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+    padding: 100px 32px 40px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    overflow-y: auto;
+    display: block !important;
+    flex: none;
+    justify-content: flex-start;
   }
 
   .main-menu.active {
-    display: flex;
+    right: 0;
   }
 
   .menu-list {
     flex-direction: column;
-    padding: 20px;
+    padding: 0;
+  }
+  
+  .menu-list ul,
+  .menu-list-dark ul {
+    flex-direction: column;
+    gap: 0;
+    margin: 0 0 40px;
+  }
+  
+  .menu-list ul li,
+  .menu-list-dark ul li {
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .menu-list ul li a,
+  .menu-list-dark ul li a {
+    display: block;
+    padding: 16px 0;
+    color: #FFFFFF !important;
+    font-size: 18px;
   }
 
   .header-actions {
@@ -769,6 +810,64 @@ p {
 
   .card-video {
     width: 160px;
+  }
+  
+  /* Botões no mobile */
+  .header-actions-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .header-actions-mobile .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .header-actions-mobile .btn-outline {
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+  }
+  
+  .header-actions-mobile .btn-outline-dark {
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+  }
+  
+  .header-actions-mobile .btn-primary {
+    background: #FACC15;
+    color: #0F172A;
+    border: none;
+  }
+  
+  /* Overlay escuro */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Remove scroll do body quando menu aberto */
+  body.menu-open {
+    overflow: hidden;
   }
 }
 
@@ -994,127 +1093,6 @@ p {
     width: 24px;
     height: 24px;
   }
-  
-  /* Menu mobile - versão melhorada */
-  .main-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 85%;
-    max-width: 380px;
-    height: 100vh;
-    background: #0F172A;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
-    padding: 100px 32px 40px;
-    transition: right 0.3s ease-in-out;
-    z-index: 1000;
-    overflow-y: auto;
-    display: block !important;
-  }
-  
-  .main-menu.active {
-    right: 0;
-  }
-  
-  /* Links do menu mobile */
-  .main-menu .menu-list,
-  .main-menu .menu-list-dark {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .main-menu .menu-list ul,
-  .main-menu .menu-list-dark ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 40px;
-  }
-  
-  .main-menu .menu-list ul li,
-  .main-menu .menu-list-dark ul li {
-    margin: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .main-menu .menu-list ul li a,
-  .main-menu .menu-list-dark ul li a {
-    display: block;
-    padding: 16px 0;
-    color: #FFFFFF !important;
-    font-size: 18px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-  
-  .main-menu .menu-list ul li a:hover,
-  .main-menu .menu-list-dark ul li a:hover {
-    color: #FACC15 !important;
-    padding-left: 8px;
-  }
-  
-  /* Botões no mobile */
-  .header-actions-mobile {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 40px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  
-  .header-actions-mobile .btn {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-  }
-  
-  .header-actions-mobile .btn-outline {
-    background: transparent;
-    border: 1px solid #FFFFFF;
-    color: #FFFFFF;
-  }
-  
-  .header-actions-mobile .btn-outline-dark {
-    background: transparent;
-    border: 1px solid #FFFFFF;
-    color: #FFFFFF;
-  }
-  
-  .header-actions-mobile .btn-primary {
-    background: #FACC15;
-    color: #0F172A;
-    border: none;
-  }
-  
-  /* Overlay escuro */
-  .menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-  }
-  
-  .menu-overlay.active {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  /* Remove scroll do body quando menu aberto */
-  body.menu-open {
-    overflow: hidden;
-  }
 }
 
 /* Desktop - esconde botões mobile */
@@ -1148,10 +1126,176 @@ p {
   visibility: visible;
 }
 
-.main-menu {
-  transition: right 0.3s ease-in-out;
-}
-
 body.menu-open {
   overflow: hidden;
+}
+
+
+
+/* ========== FOOTER ========== */
+.site-footer {
+    background: #d2d5e3;
+    padding: 60px 0 30px;
+    color: #94A3B8;
+}
+
+/* Regra padrão (desktop) */
+.container-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Regra para mobile (DEVE VIR DEPOIS) */
+@media (max-width: 768px) {
+    .container-footer {
+        margin-top: -44px;
+        padding: 630px 24px 44px 24px;
+    }
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* Coluna 1 - Logo e Redes Sociais */
+.footer-col-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer-logo {
+    width: 140px;
+    height: auto;
+}
+
+.footer-social {
+    display: flex;
+    gap: 16px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #161616;
+    transform: translateY(-3px);
+}
+
+.social-link img {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* Títulos das colunas */
+.footer-title {
+    color: #161616;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Listas de links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #2C2E36;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #0a0a0a;
+    padding-left: 5px;
+}
+
+/* Divisória */
+.footer-divider {
+    border: none;
+    height: 1px;
+    background: #1E293B;
+    margin: 30px 0 20px;
+}
+
+/* Copyright */
+.copy-right {
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: #64748B;
+    margin: 0;
+}
+
+/* ========== RESPONSIVO FOOTER ========== */
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+    
+    .footer-col-brand {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 40px 0 20px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-col-brand {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .footer-title {
+        text-align: center;
+    }
+    
+    .footer-links {
+        text-align: center;
+    }
+    
+    .footer-links a:hover {
+        padding-left: 0;
+    }
+    
+    .copy-right {
+        font-size: 12px;
+    }
 }
