@@ -77,6 +77,14 @@
     margin-bottom: 80px;
 }
 
+.resale-comparative-chart-mobile {
+    display: none;
+}
+
+.resale-comparative-chart-header {
+    padding: 0 24px 40px 24px;
+}
+
 .container-comparative-desktop>h2 {
     font-size: 40px;
 }
@@ -386,6 +394,27 @@
     background-color: var(--color-text-muted);
 }
 
+.resale-infos-numbers-mobile {
+    display: none;
+    background-color: var(--color-secondary-dark);
+}
+
+.container-resale-infos-numbers-mobile {
+    display: flex;
+    max-width: 1220px;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    gap: 15px;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.border-infos-numbers-resale-mobile {
+    border-bottom: 2px solid var(--color-text-primary);
+    padding-bottom: 15px;
+}
+
 @media (max-width: 1240px) {
     .content-resale-model {
         grid-template-columns: 1fr 1fr;
@@ -395,6 +424,80 @@
 }
 
 @media (max-width: 768px) {
+    .resale {
+        height: 100vh;
+    }
+
+    .text-hero-resale {
+        margin-top: 150px;
+    }
+
+    .btn-blue {
+        margin-bottom: 20px
+    }
+
+    .resale>img {
+        height: 100vh;
+    }
+
+    .resale-infos-numbers-mobile {
+        display: flex;
+    }
+
+    .resale-infos-numbers {
+        display: none;
+    }
+
+    .content-resale-infos-numbers>h2 {
+        font-size: 44px;
+    }
+
+    .resale-comparative-chart {
+        display: none;
+    }
+
+    .resale-comparative-chart-mobile {
+        display: flex;
+        padding: 120px 0 80px 0;
+        text-align: center;
+    }
+
+    .resale-comparative-without-pdv {
+        margin-top: 50px;
+    }
+
+    .resale-comparative-chart-mobile table {
+        margin: 20px 0;
+    }
+
+    .resale-comparative-chart-mobile td,
+    .resale-comparative-chart-mobile th {
+
+        border: none;
+        border-bottom: 1px solid var(--neutral-color-600);
+        padding: 20px 0px;
+        font-size: 17px;
+    }
+
+    .resale-comparative-chart-mobile td:nth-child(1),
+    .resale-comparative-chart-mobile th:nth-child(1) {
+        text-align: left;
+    }
+
+    .resale-comparative-chart-mobile td:nth-child(2),
+    .resale-comparative-chart-mobile th:nth-child(2) {
+        text-align: right;
+    }
+
+    .resale-comparative-chart-mobile tr:last-child td {
+        border-bottom: none;
+    }
+
+    .resale-comparative-chart-mobile table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
     .content-resale-model {
         grid-template-columns: 1fr;
         margin: auto;

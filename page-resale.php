@@ -42,6 +42,26 @@
             </div>
         </div>
     </section>
+    <section class="resale-infos-numbers-mobile">
+        <div class="container-resale-infos-numbers-mobile">
+            <div class="content-resale-infos-numbers border-infos-numbers-resale-mobile">
+                <h2 class="counter" data-target="11" data-prefix="+" data-sufix=" Mil">+11 Mil</h2>
+                <p>Clientes ativos</p>
+            </div>
+            <div class="content-resale-infos-numbers border-infos-numbers-resale-mobile">
+                <h2 class="counter" data-target="7" data-prefix="R$ " data-sufix=" Bi">R$ 7 Bi</h2>
+                <p>Transacionado por ano</p>
+            </div>
+            <div class="content-resale-infos-numbers border-infos-numbers-resale-mobile">
+                <h2>Todos</h2>
+                <p>Os estados</p>
+            </div>
+            <div class="content-resale-infos-numbers border-infos-numbers-resale-mobile">
+                <h2 class="counter" data-target="35" data-prefix="+" data-sufix=" Mil">+35 Mil</h2>
+                <p>leads por ano</p>
+            </div>
+        </div>
+    </section>
     <section class="resale-comparative-chart">
         <div class="container-comparative-desktop">
             <h2>Vender tecnologia sozinho é difícil.</h2>
@@ -88,7 +108,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-comparative-mobile">
+        <!-- <div class="container-comparative-mobile">
             <div class="carousel-container-resale">
                 <div class="carousel-track-resale">
                     <div class="carousel-slide-resale active">
@@ -117,6 +137,44 @@
                     <button class="dot-resale active" data-index="0" aria-label="Slide 1"></button>
                     <button class="dot-resale" data-index="1" aria-label="Slide 2"></button>
                 </div>
+            </div>
+        </div> -->
+    </section>
+    <section class="resale-comparative-chart-mobile">
+        <div class="container">
+            <div class="resale-comparative-chart-header">
+                <h2>Vender tecnologia sozinho é difícil.</h2>
+                <br>
+                <p>O PDV Legal possui um ecossistema completo para você crescer com consistência - mesmo sem estrutura
+                    grande.</p>
+                    <div class="resale-comparative-without-pdv">
+                        <h3 class="header-comparative">Sem PDV Legal
+                            <svg class="icon red" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="#dc2626" />
+                                <path d="M15 9L9 15M9 9L15 15" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                        </h3>
+                        <br>
+                        <table>
+                            <tr>
+                                <td>Custo de desenvolvimento</td>
+                                <td>Alto</td>
+                            </tr>
+                            <tr>
+                                <td>Escalabilidade</td>
+                                <td>Limitada</td>
+                            </tr>
+                            <tr>
+                                <td>Geração de leads</td>
+                                <td>Instável</td>
+                            </tr>
+                            <tr>
+                                <td>Suporte comercial</td>
+                                <td>Solitário</td>
+                            </tr>
+                        </table>
+                    </div>
             </div>
         </div>
     </section>
