@@ -1,26 +1,24 @@
 
 document.addEventListener('DOMContentLoaded', function () {
-
-const innerItems = [
-            { icon: '📱', label: 'Cardápio' },
-            { icon: '⭐', label: 'Fidelidade' },
-            { icon: '📊', label: 'BI' }
+const baseUrl = window.location.origin + '/metricaz/wordpress/wp-content/themes/new-webautomacao-theme/assets/icons/cases/';
+        
+        const innerItems = [
+            { icon: 'menu.svg', label: 'Cardápio', segment: 'cardapio' },
+            { icon: 'star.svg', label: 'Fidelidade', segment: 'fidelidade' },
+            { icon: 'bi.svg', label: 'BI', segment: 'bi' }
         ];
 
         const outerItems = [
-            { icon: '🏨', label: 'Hotelaria' },
-            { icon: '🛡️', label: 'Certificado' },
-            { icon: '🧾', label: 'Fiscal' },
-            { icon: '💳', label: 'Adquirente' },
-            { icon: '🖨️', label: 'Hardware' },
-            { icon: '⛽', label: 'Auto' },
-            { icon: '📁', label: 'ERP' },
-            { icon: '🏍️', label: 'Delivery' }
+            { icon: 'hotel.svg', label: 'Hotelaria', segment: 'hotelaria' },
+            { icon: 'certificate.svg', label: 'Certificado', segment: 'certificado' },
+            { icon: 'fiscal.svg', label: 'Fiscal', segment: 'fiscal' },
+            { icon: 'purchaser.svg', label: 'Adquirente', segment: 'adquirente' },
+            { icon: 'hardware.svg', label: 'Hardware', segment: 'hardware' },
+            { icon: 'auto.svg', label: 'Auto', segment: 'auto' },
+            { icon: 'erp.svg', label: 'ERP', segment: 'erp' },
+            { icon: 'delivery.svg', label: 'Delivery', segment: 'delivery' }
         ];
 
-        /**
-         * Renderiza os cartões dentro do container especificado
-         */
         function renderOrbit(items, radius, containerId, wrapperAnimationClass, offsetAngle = 0) {
             const container = document.getElementById(containerId);
             const angleStep = (2 * Math.PI) / items.length;
@@ -28,34 +26,27 @@ const innerItems = [
             items.forEach((item, index) => {
                 const angle = (index * angleStep) + offsetAngle;
                 
-                // Calcula posição inicial
                 const x = radius * Math.cos(angle);
                 const y = radius * Math.sin(angle);
 
-                // O wrapper lida com a posição e a contra-rotação
                 const wrapper = document.createElement('div');
                 wrapper.className = `card-wrapper ${wrapperAnimationClass}`;
                 wrapper.style.left = `calc(50% + ${x}px)`;
                 wrapper.style.top = `calc(50% + ${y}px)`;
 
-                // O card interno lida apenas com o visual e o hover (zoom)
                 wrapper.innerHTML = `
-                    <div class="card">
-                        <div class="icon">${item.icon}</div>
+                    <a href="#${item.segment}" class="card" style="text-decoration: none; color: inherit;">
+                        <div class="icon"><img src="${baseUrl}${item.icon}" alt="${item.label}"></div>
                         <div class="label">${item.label}</div>
-                    </div>
+                    </a>
                 `;
 
                 container.appendChild(wrapper);
             });
         }
 
-        // Renderiza as duas órbitas com suas respectivas configurações
-        // Outer orbit: Raio 260px, injeta no container 'orbit-outer', e usa a contra-rotação 'counter-cw'
-        renderOrbit(outerItems, 260, 'orbit-outer', 'counter-cw', -Math.PI / 2);
-        
-        // Inner orbit: Raio 150px, injeta no container 'orbit-inner', e usa a contra-rotação 'counter-ccw'
-        renderOrbit(innerItems, 150, 'orbit-inner', 'counter-ccw', -Math.PI / 1.2);
+        renderOrbit(outerItems, 230, 'orbit-outer', 'counter-cw', -Math.PI / 2);
+        renderOrbit(innerItems, 140, 'orbit-inner', 'counter-ccw', -Math.PI / 1.2);
 
   const toggle = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.main-menu');

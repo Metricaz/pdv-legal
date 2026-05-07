@@ -1,10 +1,11 @@
 <?php   
   $hasBackground = $args['hasBackground'] ?? false;
+  $colorBackground = $args['colorBackground'] ?? '';
 ?>
-  <section>
-   <img class="background-form-mobile" src="http://localhost/metricaz/wordpress/wp-content/themes/new-webautomacao-theme/assets/images/footer/background-form-mobile.png" alt="Background form">
-    <div class="form <?php echo $hasBackground ? 'form-background' : ''; ?>">
-      <img class="background-form" src="http://localhost/metricaz/wordpress/wp-content/themes/new-webautomacao-theme/assets/images/footer/background-form.png" alt="Background form">
+  <section class="form-section">
+   <img class="background-form-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/images/footer/background-form-mobile.png" alt="Background form">
+    <div class="form" style="background-color: <?php echo $colorBackground; ?>;">
+      <img class="background-form" src="<?php echo get_template_directory_uri(); ?>/assets/images/footer/background-form.png" alt="Background form">
     <div class="content-form">
       <h2>Cresça com controle</h2>
       <p>Converse com um especialista e descubra como estruturar seu negócio com tranquilidade.</p>

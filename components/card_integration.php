@@ -1,16 +1,18 @@
 <?php
 $title = $args['title'] ?? '';
 $description = $args['description'] ?? '';
-$image = $args['image'] ?? '';
+$icon = $args['icon'] ?? '';
 $segment = $args['segment'] ?? '';
+$background_icon = $args['background_icon'] ?? '#ffffff';
 ?>
 
-<div class="container-card-integration">
+<div class="container-card-integration" id="<?php echo esc_html(strtolower($segment)); ?>">
     <div class="content-card-infos">
         <img 
             class="img-card-integration"
-            src="<?php echo get_template_directory_uri(); ?><?php echo esc_html($image); ?>"
-            alt=""
+            style="background-color: <?php echo esc_html($args['background_icon']); ?>; border-radius: 20px;"
+            src="<?php echo get_template_directory_uri(); ?><?php echo esc_html($icon); ?>"
+            alt="ícone de integração"
         >
         <div>
             <h3><?php echo esc_html($title); ?></h3>
