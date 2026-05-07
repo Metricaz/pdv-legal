@@ -460,9 +460,64 @@
         display: flex;
         padding: 120px 0 80px 0;
         text-align: center;
+        max-width: 100%;
+        overflow: hidden;
+        flex-direction: column;
     }
 
-    .resale-comparative-without-pdv {
+    .carousel-container-resale {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 12px;
+        margin-top: 30px;
+        max-width: 100%;
+        box-sizing: border-box;
+        min-height: auto;
+    }
+
+    .carousel-track-resale {
+        display: flex;
+        transition: transform 0.4s ease-in-out;
+        width: 200%;
+    }
+
+    .carousel-slide-resale {
+        min-width: 50%;
+        box-sizing: border-box;
+        flex: 0 0 50%;
+        overflow: visible;
+    }
+
+    .carousel-dots-resale {
+        position: relative;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    .dot-resale {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.3);
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .dot-resale.active {
+        background-color: #000;
+        transform: scale(1.3);
+    }
+
+    .resale-comparative-pdv-header {
         margin-top: 50px;
     }
 
