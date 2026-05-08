@@ -415,6 +415,11 @@
     padding-bottom: 15px;
 }
 
+
+.form {
+    background-color: #EAB308;
+}
+
 @media (max-width: 1240px) {
     .content-resale-model {
         grid-template-columns: 1fr 1fr;
@@ -554,9 +559,53 @@
     }
 
     .content-resale-model {
-        grid-template-columns: 1fr;
         margin: auto;
         justify-items: center;
+    }
+
+    .card-model-resale {
+        width: 140px;
+        padding: 40px 24px;
+        border-radius: 26px;
+        position: relative;
+        border: 1px solid rgb(255 255 255 / 18%);
+        box-shadow: inset 9px 10px 20px #00000008, inset -11px -8px 20px #00000000;
+        transition: .5s;
+    }
+
+    .card-model-resale>h4 {
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .card-model-resale:hover {
+        background-color: #F8FAFC33;
+        transition: .5s;
+        cursor: pointer;
+    }
+
+    .icon-card-model-resale {
+        width: 32px;
+        height: 32px;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+    }
+
+    .icon-card-model-resale img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .container-resale-model>h2,
+    .container-resale-model>p {
+        text-align: left;
+    }
+
+    .form {
+        background-color: transparent;
     }
 
     .container-growth {

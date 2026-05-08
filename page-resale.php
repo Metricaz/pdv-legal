@@ -364,7 +364,7 @@
         </div>
     </section>
     <div class="form-resale">
-<?php get_template_part('components/form_footer', null, ['hasBackground' => true, 'colorBackground' => '#EAB308']); ?>
+        <?php get_template_part('components/form_footer_resale', null); ?>
     </div>
     
 </main>
