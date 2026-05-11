@@ -5,6 +5,7 @@ $id_video = $args['id_video'] ?? '';
 $segment = $args['segment'] ?? '';
 $uf = $args['uf'] ?? '';
 $city = $args['city'] ?? '';
+$view_case = $args['view_case'] ?? true;
 ?>
 
 <div class="container-card-video">
@@ -24,10 +25,13 @@ $city = $args['city'] ?? '';
             <p class="uf-card-video"><?php echo esc_html($city); ?> - <?php echo esc_html($uf); ?></p>
             <p class="description-card-video"><?php echo esc_html($description); ?></p>
         </div>
-        <div class="content-button-view-case">
-            <button class="btn btn-primary round" type="button" onclick="abrirFullscreen('video-<?php echo esc_attr($id_video); ?>')">
-                Ver case
-            </button>
-        </div>
+        <?php if ($view_case) : ?>
+            <div class="content-button-view-case">
+                <button class="btn btn-primary btn round"
+                    onclick="abrirFullscreen('video-<?php echo esc_attr($id_video); ?>')">
+                    Ver case
+                </button>
+            </div>
+        <?php endif; ?>
     </div>
 </div>

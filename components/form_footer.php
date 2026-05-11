@@ -1,9 +1,10 @@
 <?php   
   $hasBackground = $args['hasBackground'] ?? false;
+  $colorBackground = $args['colorBackground'] ?? '';
 ?>
-  <section>
+  <section class="form-section">
    <img class="background-form-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/images/footer/background-form-mobile.png" alt="Background form">
-    <div class="form <?php echo $hasBackground ? 'form-background' : ''; ?>">
+    <div class="form" style="background-color: <?php echo $colorBackground; ?>;">
       <img class="background-form" src="<?php echo get_template_directory_uri(); ?>/assets/images/footer/background-form.png" alt="Background form">
     <div class="content-form">
       <h2>Cresça com controle</h2>

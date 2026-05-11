@@ -88,7 +88,7 @@
             ]); ?>
         </div>
     </section>
-  <?php get_template_part('components/form_footer', null, ['hasBackground' => true]); ?>
+  <?php get_template_part('components/form_footer', null, ['hasBackground' => true, 'colorBackground' => '#0F1F4B']); ?>
 </main>
 <script>
   const videosData = <?php
