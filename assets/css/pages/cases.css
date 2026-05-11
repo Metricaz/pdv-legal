@@ -39,6 +39,17 @@
     color: #fff;
 }
 
+.content-arrow-up-cases {
+    position: absolute;
+    border-radius: 16px;
+    padding: 5px;
+    width: 80px;
+    height: 80px;
+    box-shadow: 2px 2px 20px #00000069;
+    align-content: center;
+    text-align: -webkit-center;
+}
+
 .specialist>h2 {
     text-align: center;
     margin-bottom: 40px;
@@ -53,6 +64,9 @@
 }
 
 .refresh-cases {
+    max-width: 1220px;
+    margin: auto;
+    padding: 20px;
     display: flex;
     justify-content: center;
 }
