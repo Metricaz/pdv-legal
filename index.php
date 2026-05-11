@@ -4,7 +4,18 @@
 <main class="main-content-home">
 
 <section class="home-hero" aria-labelledby="hero-title">
-    <div class="content-hero-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/home/hero.png');"></div>
+    <div class="content-hero-bg">
+        <img 
+            class="hero-bg" 
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/home/hero.webp" 
+            alt="Sistema de Gestão para Varejo e Food Service"
+            fetchpriority="high">
+        <img 
+            class="hero-bg-mobile" 
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/home/hero-mobile.webp" 
+            alt="Sistema de Gestão para Varejo e Food Service"
+            fetchpriority="high">
+    </div>
     <div class="hero-content container">
         <h1 id="hero-title">
             Sistema de Gestão para<br />Varejo e Food Service

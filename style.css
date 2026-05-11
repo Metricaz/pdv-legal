@@ -35,8 +35,14 @@ Author URI: https://metricaz.com/
   --neutral-color-text-gray: #2C2E36;
   --neutral-color-headings-black: #232636;
 
-  /* Tipografia */
   --font-family-base: "DM Sans", sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 html {
@@ -44,7 +50,6 @@ html {
 }
 
 main {
-  /* max-width: 1200px; */
   margin: 0 auto;
 }
 
@@ -77,19 +82,16 @@ h5 {
   line-height: 1.4;
 }
 
-/* Parágrafos */
 p {
   font-size: 16px;
   line-height: 1.6;
 }
 
-/* Destaque */
 .destaque {
   font-size: 16px;
   font-weight: 700;
 }
 
-/* Parágrafo menor */
 .paragrafo-small {
   font-size: 12px;
   line-height: 1.4;
@@ -116,7 +118,6 @@ p {
   background: transparent;
 }
 
-/* Conteúdo do header */
 .header-container {
   max-width: 1220px;
   margin: 0 auto;
@@ -125,13 +126,11 @@ p {
   justify-content: space-between;
 }
 
-/* Logo */
 .logo img {
   height: 38px;
   display: block;
 }
 
-/* Menu - UNIFICADO (Desktop) */
 .main-menu {
   flex: 1;
   display: flex;
@@ -179,14 +178,12 @@ p {
   opacity: 0.8;
 }
 
-/* Botões (header-actions) */
 .header-actions {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-/* Estilos gerais para botões */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -216,7 +213,6 @@ p {
   box-shadow: -2px 12px 20px #0000006b;
 }
 
-/* Botão "Login" estilo contorno */
 .btn-outline {
   border: 1px solid var(--color-background-base);
   background-color: transparent;
@@ -234,12 +230,10 @@ p {
   padding: 15px 20px;
 }
 
-/* Garante que os links do menu fiquem brancos */
 .header-home .menu-list ul li a {
   color: #FFFFFF !important;
 }
 
-/* Botão login fica branco com borda branca */
 .header-home .btn-outline {
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
@@ -255,7 +249,6 @@ p {
   /* width: 100%; */
 }
 
-/* Botão "Falar com especialista" estilo primário */
 .btn-primary {
   background-color: var(--color-secondary-base);
   color: var(--color-gereric-dark);
@@ -265,7 +258,6 @@ p {
   background-color: var(--color-secondary-dark);
 }
 
-/* ===== BOTÃO MENU ===== */
 .menu-toggle {
   display: none;
   align-items: center;
@@ -278,7 +270,6 @@ p {
   background-color: var(--color-background-base);
 }
 
-/* seta */
 .menu-toggle .arrow {
   width: 6px;
   height: 6px;
@@ -299,10 +290,8 @@ p {
     padding-top: 60px;
     position: relative;
     min-height: 100vh;
-    /* Fundo removido - será aplicado apenas no desktop via media query */
 }
 
-/* Desktop - mantém o fundo */
 @media (min-width: 769px) {
     .form {
         background-color: #D2D5E3;
@@ -443,13 +432,11 @@ p {
 }
 
 .accordion-header-content.active-icon {
-  /* transform: translate(800%, -96%); */
   transition: all .5s ease;
 }
 
 .accordion-body.active-content {
   transform: translateY(75px);
-  /* sobe suavemente */
   transition: all .5s ease;
 }
 
@@ -776,7 +763,6 @@ p {
   max-height: 200px;
 }
 
-/* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .header-container {
     padding: 0;
@@ -806,7 +792,6 @@ p {
     align-items: center;
   }
 
-  /* MENU MOBILE - SOBRESCREVE O DESKTOP */
   .main-menu {
     position: fixed;
     top: 0;
@@ -925,7 +910,6 @@ p {
     width: 160px;
   }
   
-  /* Botões no mobile */
   .header-actions-mobile {
     display: flex;
     flex-direction: column;
@@ -959,7 +943,6 @@ p {
     border: none;
   }
   
-  /* Overlay escuro */
   .menu-overlay {
     position: fixed;
     top: 0;
@@ -978,13 +961,10 @@ p {
     visibility: visible;
   }
   
-  /* Remove scroll do body quando menu aberto */
   body.menu-open {
     overflow: hidden;
   }
 }
-
-/* //////// */
 
 .hero-section {
   display: flex;
@@ -1018,9 +998,6 @@ p {
   line-height: 1.5;
 }
 
-/* ========== MENU MOBILE LINDÃO ========== */
-
-/* Esconde elementos desktop no mobile */
 @media (max-width: 768px) {
   .logo-desktop {
     display: none;
@@ -1041,7 +1018,6 @@ p {
     z-index: 1001;
   }
   
-  /* Botão menu toggle */
   .menu-toggle {
     display: flex;
     align-items: center;
@@ -1060,7 +1036,6 @@ p {
   }
 }
 
-/* Desktop - esconde botões mobile */
 @media (min-width: 769px) {
   .header-home-mobile {
     display: none;
@@ -1071,7 +1046,6 @@ p {
   }
 }
 
-/* Garante que o overlay funcione */
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -1095,9 +1069,6 @@ body.menu-open {
   overflow: hidden;
 }
 
-
-
-/* ========== FOOTER ========== */
 .site-footer {
     background: #d2d5e3;
     padding: 60px 0 30px;
@@ -1111,7 +1082,6 @@ body.menu-open {
     padding: 0 20px;
 }
 
-/* Regra para mobile (DEVE VIR DEPOIS) */
 @media (max-width: 768px) {
     .container-footer {
         margin-top: -44px;
@@ -1126,7 +1096,6 @@ body.menu-open {
     margin-bottom: 50px;
 }
 
-/* Coluna 1 - Logo e Redes Sociais */
 .footer-col-brand {
     display: flex;
     flex-direction: column;
@@ -1154,22 +1123,12 @@ body.menu-open {
     transition: all 0.3s ease;
 }
 
-.social-link:hover {
-    background: #161616;
-    transform: translateY(-3px);
-}
-
 .social-link img {
     width: 20px;
     height: 20px;
     transition: all 0.3s ease;
 }
 
-.social-link:hover img {
-    filter: brightness(0) invert(1);
-}
-
-/* Títulos das colunas */
 .footer-title {
     color: #161616;
     font-family: 'DM Sans', sans-serif;
@@ -1179,7 +1138,6 @@ body.menu-open {
     letter-spacing: 0.5px;
 }
 
-/* Listas de links */
 .footer-links {
     list-style: none;
     padding: 0;
@@ -1203,7 +1161,6 @@ body.menu-open {
     padding-left: 5px;
 }
 
-/* Divisória */
 .footer-divider {
     border: none;
     height: 1px;
@@ -1211,7 +1168,6 @@ body.menu-open {
     margin: 30px 0 20px;
 }
 
-/* Copyright */
 .copy-right {
     text-align: center;
     font-family: 'DM Sans', sans-serif;
@@ -1220,7 +1176,6 @@ body.menu-open {
     margin: 0;
 }
 
-/* ========== RESPONSIVO FOOTER ========== */
 @media (max-width: 1024px) {
     .footer-grid {
         grid-template-columns: repeat(3, 1fr);

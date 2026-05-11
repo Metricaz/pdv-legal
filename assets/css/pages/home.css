@@ -1,6 +1,6 @@
-/* ========== HERO SECTION CORRIGIDA ========== */
 .home-hero {
   position: relative;
+  height: 100vh;
   min-height: 100vh;
   overflow: hidden;
   display: flex;
@@ -15,16 +15,22 @@
   width: 100%;
   height: 100%;
   z-index: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .content-hero-bg {
-    background-image: url('../images/home/hero-mobile.png');
-  }
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero-bg-mobile {
+  display: none;
 }
 
 .hero-content {
@@ -54,7 +60,6 @@
   margin-top: -20px;
 }
 
-/* ========== SETA GLASS ========== */
 .content-arrow-down {
   position: absolute;
   left: 50%;
@@ -100,7 +105,6 @@
   }
 }
 
-/* Responsivo mobile */
 @media (max-width: 768px) {
   .hero-content {
     margin: 0;
@@ -111,6 +115,21 @@
     bottom: 80px;
     padding: 0 24px;
     gap: 80px;
+  }
+
+  .hero-bg {
+    display: none;
+  }
+
+  .hero-bg-mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   .content-arrow-down {
@@ -126,7 +145,6 @@
   }
 }
 
-/* ========== SOBRE O SISTEMA ========== */
 .content-about-system {
   max-width: 1220px;
   margin: auto;
@@ -166,7 +184,6 @@
   place-content: center;
 }
 
-/* ========== CARDS SYSTEM ========== */
 .content-cards-system {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -221,7 +238,6 @@
   padding-bottom: 70px;
 }
 
-/* ========== INTEGRATION SYSTEM ========== */
 .integration-system {
   background-color: var(--color-background-dark);
   padding-top: 80px;
@@ -248,7 +264,7 @@
   width: max-content;
   gap: 40px;
   margin-bottom: 100px;
-  animation: scroll 35s linear infinite;
+  animation: scroll 100s linear infinite;
 }
 
 .item {
@@ -266,7 +282,6 @@
   }
 }
 
-/* ========== EXPLORE INTEGRATIONS ========== */
 .explore-integrations {
   max-width: 1220px;
   margin: auto;
@@ -359,7 +374,6 @@
   border-bottom-left-radius: 20px;
 }
 
-/* ========== YOUR BUSINESS ========== */
 .your-business {
   margin: auto;
 }
@@ -442,7 +456,6 @@
   display: none;
 }
 
-/* ========== GLASS BORDER ========== */
 .glass-border {
   position: relative;
   border-radius: 16px;
@@ -461,7 +474,6 @@
   z-index: -1;
 }
 
-/* ========== OUTROS ========== */
 .text-integration-highlight {
   color: var(--color-primary-light);
 }
@@ -516,7 +528,6 @@
   color: #fff;
 }
 
-/* ========== RESPONSIVO MOBILE ========== */
 @media (max-width: 768px) {
   .hero-content {
     margin: 0;
@@ -529,7 +540,6 @@
     gap: 80px;
   }
 
-  /* Correção: imagem mobile via CSS */
   .hero-bg {
     display: none;
   }
