@@ -334,7 +334,8 @@ p {
   margin-bottom: 6px;
 }
 
-.content-input>input {
+.content-input>input,
+.content-input>select {
   height: 50px;
   border-radius: 8px;
   width: 100%;

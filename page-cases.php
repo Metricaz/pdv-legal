@@ -39,6 +39,9 @@
             </select>
         </div>
         <div class="container-cases-list" id="cases-container"></div>
+        <a class="content-arrow-up-cases" href="#cases-container">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/integrations/arrow-up-blue.svg" alt="Seta para cima">
+        </a>
         <div class="refresh-cases">
             <button id="btn-load-more" class="btn-load-more">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/cases/refresh.svg" />
@@ -105,7 +108,7 @@
 const botao = document.getElementById("btn-load-more");
 
 let indiceAtual = 0;
-const quantidade = 2;
+const quantidade = 4;
 
 function criarCard(video, index) {
   return `

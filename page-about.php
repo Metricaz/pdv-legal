@@ -95,33 +95,39 @@
                 </div>
 
                 <div class="timeline-item">
-                <div class="badge badge-solid">2022</div>
-                <h3>Inteligência e<br>Multilojas</h3>
-                <p>Melhoramos nossas análises e preparamos o sistema para o próximo nível: agora atendemos desde o lojista individual até redes e franquias.</p>
+                <div class="badge badge-solid">2021</div>
+                <h3>Pagamento<br>Facilitado</h3>
+                <p>Integramos Pix diretamente no sistema. Isso acabou com os erros de conta e facilitou o dia a dia de quem vende e de quem compra.</p>
                 </div>
 
                 <div class="timeline-item">
-                <div class="badge badge-solid">2022</div>
-                <h3>Inteligência e<br>Multilojas</h3>
-                <p>Melhoramos nossas análises e preparamos o sistema para o próximo nível: agora atendemos desde o lojista individual até redes e franquias.</p>
+                <div class="badge badge-solid">2020</div>
+                <h3>Autoatendimento e<br>Delivery</h3>
+                <p>Inovamos para manter os negócios ativos: lançamos soluções de delivery e sistemas de autoatendimento para mercados em condomínios, unindo conveniência e segurança.</p>
                 </div>
 
                 <div class="timeline-item">
-                <div class="badge badge-solid">2022</div>
-                <h3>Inteligência e<br>Multilojas</h3>
-                <p>Melhoramos nossas análises e preparamos o sistema para o próximo nível: agora atendemos desde o lojista individual até redes e franquias.</p>
+                <div class="badge badge-solid">2019</div>
+                <h3>Pioneirismo nas<br>Maquininhas</h3>
+                <p>Fomos um dos primeiros a rodar o sistema direto nas maquininhas (Smart POS). Essa parceria com adquirentes trouxe mobilidade e eliminou a necessidade de balcões fixos.</p>
                 </div>
 
                 <div class="timeline-item">
-                <div class="badge badge-solid">2022</div>
-                <h3>Inteligência e<br>Multilojas</h3>
-                <p>Melhoramos nossas análises e preparamos o sistema para o próximo nível: agora atendemos desde o lojista individual até redes e franquias.</p>
+                <div class="badge badge-solid">2018</div>
+                <h3>Gestão Completa</h3>
+                <p>Crescemos junto com nossos clientes. Adicionamos controle de estoque e financeiro, transformando o PDV em uma ferramenta completa para cuidar de todo o negócio.</p>
                 </div>
 
                 <div class="timeline-item">
-                <div class="badge badge-solid">2022</div>
-                <h3>Inteligência e<br>Multilojas</h3>
-                <p>Melhoramos nossas análises e preparamos o sistema para o próximo nível: agora atendemos desde o lojista individual até redes e franquias.</p>
+                <div class="badge badge-solid">2017</div>
+                <h3>Primeira Solução</h3>
+                <p>Lançamos nossa primeira versão oficial. O foco era resolver a vida de lojistas e restaurantes com um caixa rápido, seguro e dentro das regras fiscais.</p>
+                </div>
+
+                <div class="timeline-item">
+                <div class="badge badge-solid">2016</div>
+                <h3>O Começo</h3>
+                <p>O PDV Legal nasceu da vontade de ajudar. Especialistas em automação se uniram para criar um sistema de vendas que fosse, finalmente, simples de usar.</p>
                 </div>
 
             </div>
@@ -136,7 +142,7 @@
                     <p class="professional-name">Aranquen Pagotto</p>
                     <p class="professional-role">CEO & COFUNDADOR</p>
                     <p class="professional-bio">Pioneiro em automação comercial desde 1989, construiu soluções que chegaram a mais de 8.500 estabelecimentos no Brasil — do food truck ao grande varejo.</p>
-                    <a href="/#" class="professional-social-linkedin" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/araquen-pagotto/" class="professional-social-linkedin" target="_blank" rel="noopener noreferrer">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/footer/social-linkedin.svg" alt="LinkedIn de Aranquen Pagotto">
                     </a>
                 </div>
@@ -144,7 +150,7 @@
                     <p class="professional-name">Luis Garbelini</p>
                     <p class="professional-role">COFUNDADOR & HEAD DE INOVAÇÃO</p>
                     <p class="professional-bio">Mais de 35 anos conectando tecnologia e varejo — do software mais vendido em food service no Brasil a soluções mobile que chegam a milhares de PDVs.</p>
-                    <a href="/#" class="professional-social-linkedin" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/luis-garbelini-17b040170/" class="professional-social-linkedin" target="_blank" rel="noopener noreferrer">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/footer/social-linkedin.svg" alt="LinkedIn de Luis Garbelini">
                     </a>
                 </div>
@@ -152,7 +158,7 @@
                     <p class="professional-name">Alex Adriano Oliveira</p>
                     <p class="professional-role">CTO</p>
                     <p class="professional-bio">Mais de 20 anos transformando tecnologia em resultado — da arquitetura de sistemas à liderança técnica que sustenta operações em escala.</p>
-                    <a href="/#" class="professional-social-linkedin" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/alex-adriano-oliveira-33100621/" class="professional-social-linkedin" target="_blank" rel="noopener noreferrer">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/footer/social-linkedin.svg" alt="LinkedIn de Alex Adriano Oliveira">
                     </a>
                 </div>
@@ -160,15 +166,12 @@
                     <p class="professional-name">Rogério Silva</p>
                     <p class="professional-role">Head de desenvolvimento</p>
                     <p class="professional-bio">Mais de 20 anos moldando soluções de software — referência em Android aplicado ao ponto de venda e à realidade do varejo brasileiro.</p>
-                    <a href="/#" class="professional-social-linkedin" target="_blank" rel="noopener noreferrer">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/footer/social-linkedin.svg" alt="LinkedIn de Rogério Silva">
-                    </a>
                 </div>
                 <div class="content-position-our-team">
                     <p class="professional-name">Célio Pupo</p>
                     <p class="professional-role">Head de produtos & comercial</p>
                     <p class="professional-bio">Dez anos na intersecção entre produto, vendas e canal — transformando parceiros técnicos em empreendedores e tecnologia em crescimento escalável.</p>
-                    <a href="/#" class="professional-social-linkedin" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/celiopupo/" class="professional-social-linkedin" target="_blank" rel="noopener noreferrer">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/footer/social-linkedin.svg" alt="LinkedIn de Célio Pupo">
                     </a>
                 </div>
@@ -176,7 +179,7 @@
                     <p class="professional-name">Matheus Paiva</p>
                     <p class="professional-role">Head de MARKETING</p>
                     <p class="professional-bio">Mais de uma década conectando marca, canais e receita — de estratégia de posicionamento à expansão que multiplicou parceiros e volume transacionado.</p>
-                    <a href="/#" class="professional-social-linkedin" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/matheus-paiva-simone/" class="professional-social-linkedin" target="_blank" rel="noopener noreferrer">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/footer/social-linkedin.svg" alt="LinkedIn de Matheus Paiva">
                     </a>
                 </div>
