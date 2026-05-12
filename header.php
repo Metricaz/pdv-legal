@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/solutions.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/cases.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/integrations.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/your-business.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/resale.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/about.css">
     <?php
@@ -27,6 +28,8 @@
         echo '<script type="text/javascript" src="'.get_template_directory_uri().'/assets/js/about.js"></script>'; 
       } else if(get_post_field('post_name', get_post()) === 'resale') {
         echo '<script type="text/javascript" src="'.get_template_directory_uri().'/assets/js/resale.js"></script>';
+      } else if(get_post_field('post_name', get_post()) === 'integrations') {
+        echo '<script type="text/javascript" src="'.get_template_directory_uri().'/assets/js/integrations.js"></script>';
       } else {
         echo '<script type="text/javascript" src="'.get_template_directory_uri().'/assets/js/main.js"></script>';
       }
