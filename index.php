@@ -126,6 +126,7 @@ $logos = array_filter($arquivos, function($arquivo) {
 });
 
 $logos = array_values($logos);
+shuffle($logos);
 $repeticoes = 4;
 
 for($rodada = 1; $rodada <= $repeticoes; $rodada++) {
@@ -153,6 +154,7 @@ $logos = array_filter($arquivos, function($arquivo) {
 });
 
 $logos = array_values($logos);
+shuffle($logos);
 $repeticoes = 4;
 
 for($rodada = 1; $rodada <= $repeticoes; $rodada++) {
@@ -180,6 +182,7 @@ $logos = array_filter($arquivos, function($arquivo) {
 });
 
 $logos = array_values($logos);
+shuffle($logos);
 $repeticoes = 4;
 
 for($rodada = 1; $rodada <= $repeticoes; $rodada++) {
