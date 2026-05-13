@@ -1,7 +1,7 @@
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    const baseUrl = window.location.origin + '/metricaz/wordpress/wp-content/themes/new-webautomacao-theme/assets/icons/cases/';
+    const baseUrl = window.location.origin + 'wp-content/themes/pdv/assets/icons/cases/';
 
     const innerItems = [
         { icon: 'menu.svg', label: 'Cardápio', segment: 'cardapio' },
