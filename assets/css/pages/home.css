@@ -97,9 +97,11 @@
   0% {
     transform: translateX(-50%) translateY(0);
   }
+
   50% {
     transform: translateX(-50%) translateY(10px);
   }
+
   100% {
     transform: translateX(-50%) translateY(0);
   }
@@ -259,6 +261,10 @@
   margin-bottom: 100px;
 }
 
+slider-mobile {
+  display: none;
+}
+
 .slide-track {
   display: flex;
   width: max-content;
@@ -277,6 +283,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -542,6 +549,22 @@
 
   .hero-bg {
     display: none;
+  }
+
+  .integration-system {
+    height: 700px;
+  }
+
+  .slider {
+    margin: 0px;
+  }
+
+  .slide-track {
+    margin: 0px;
+  }
+
+  .slider-mobile {
+    display: block;
   }
 
   .hero-bg-mobile {

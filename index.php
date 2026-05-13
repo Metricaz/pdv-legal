@@ -126,6 +126,7 @@ $logos = array_filter($arquivos, function($arquivo) {
 });
 
 $logos = array_values($logos);
+shuffle($logos);
 $repeticoes = 4;
 
 for($rodada = 1; $rodada <= $repeticoes; $rodada++) {
@@ -140,6 +141,62 @@ for($rodada = 1; $rodada <= $repeticoes; $rodada++) {
 
       </div>
     </div>
+
+        <div class="slider slider-mobile">
+      <div class="slide-track">
+
+<?php 
+$pasta_logos = get_template_directory() . '/assets/icons/home/parceiros/';
+$arquivos = scandir($pasta_logos);
+
+$logos = array_filter($arquivos, function($arquivo) {
+    return pathinfo($arquivo, PATHINFO_EXTENSION) === 'svg';
+});
+
+$logos = array_values($logos);
+shuffle($logos);
+$repeticoes = 4;
+
+for($rodada = 1; $rodada <= $repeticoes; $rodada++) {
+    foreach($logos as $arquivo) {
+        $nome_limpo = pathinfo($arquivo, PATHINFO_FILENAME);
+        $nome_exibicao = str_replace(['Logo-', '-BRANCO', '-1'], '', $nome_limpo);
+        $caminho = get_template_directory_uri() . '/assets/icons/home/parceiros/' . $arquivo;
+        echo '<img class="item" src="' . $caminho . '" alt="Logo ' . $nome_exibicao . '">';
+    }
+}
+?>
+
+      </div>
+</div>
+
+  <div class="slider slider-mobile">
+      <div class="slide-track">
+
+<?php 
+$pasta_logos = get_template_directory() . '/assets/icons/home/parceiros/';
+$arquivos = scandir($pasta_logos);
+
+$logos = array_filter($arquivos, function($arquivo) {
+    return pathinfo($arquivo, PATHINFO_EXTENSION) === 'svg';
+});
+
+$logos = array_values($logos);
+shuffle($logos);
+$repeticoes = 4;
+
+for($rodada = 1; $rodada <= $repeticoes; $rodada++) {
+    foreach($logos as $arquivo) {
+        $nome_limpo = pathinfo($arquivo, PATHINFO_FILENAME);
+        $nome_exibicao = str_replace(['Logo-', '-BRANCO', '-1'], '', $nome_limpo);
+        $caminho = get_template_directory_uri() . '/assets/icons/home/parceiros/' . $arquivo;
+        echo '<img class="item" src="' . $caminho . '" alt="Logo ' . $nome_exibicao . '">';
+    }
+}
+?>
+
+      </div>
+</div>
   </section>
 
 
