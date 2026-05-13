@@ -7,24 +7,69 @@
 
 <?php
 $franchises = get_field('json_franchises');
-$franchises_decoded = json_decode($franchises, true);
+$franchises_decoded = [];
+
+if (is_string($franchises)) {
+    $decoded = json_decode($franchises, true);
+    $franchises_decoded = is_array($decoded) ? $decoded : [];
+} elseif (is_array($franchises)) {
+    $franchises_decoded = $franchises;
+}
+
+$default_locations = [
+    [
+        'name' => 'Web Curitiba',
+        'city' => 'Curitiba',
+        'state' => 'Parana',
+        'latitude' => -25.4284,
+        'longitude' => -49.2733,
+    ],
+    [
+        'name' => 'Web Sao Paulo',
+        'city' => 'Sao Paulo',
+        'state' => 'Sao Paulo',
+        'latitude' => -23.5505,
+        'longitude' => -46.6333,
+    ],
+];
 
 $states = ['Estado'];
 $map_locations = [];
 
 foreach ($franchises_decoded as $franchise) {
-    $state = $franchise['state'];
+    if (!is_array($franchise) && !is_object($franchise)) {
+        continue;
+    }
+
+    $name = is_array($franchise) ? ($franchise['name'] ?? 'Franquia') : ($franchise->name ?? 'Franquia');
+    $city = is_array($franchise) ? ($franchise['city'] ?? '') : ($franchise->city ?? '');
+    $state = is_array($franchise) ? ($franchise['state'] ?? '') : ($franchise->state ?? '');
+    $latitude = is_array($franchise) ? ($franchise['latitude'] ?? null) : ($franchise->latitude ?? null);
+    $longitude = is_array($franchise) ? ($franchise['longitude'] ?? null) : ($franchise->longitude ?? null);
 
     if ($state !== '') {
         $states[] = $state;
     }
 
+    if (!is_numeric($latitude) || !is_numeric($longitude)) {
+        continue;
+    }
+
     $map_locations[] = [
-        'name' => $franchise['name'],
-        'state' => $franchise['state'],
-        'latitude' => (float) $franchise['latitude'],
-        'longitude' => (float) $franchise['longitude'],
+        'name' => $name,
+        'city' => $city,
+        'state' => $state,
+        'latitude' => (float) $latitude,
+        'longitude' => (float) $longitude,
     ];
+}
+
+if (empty($map_locations)) {
+    $map_locations = $default_locations;
+
+    foreach ($default_locations as $location) {
+        $states[] = $location['state'];
+    }
 }
 
 $states = array_values(array_unique($states));
@@ -40,12 +85,13 @@ if (count($states) > 1) {
 <main class="franchises-page">
     <section class="franchises-hero">
         <div class="header-text">
-            <h1>Franquias Web Automacao</h1>
+            <h1>Franquias Web Automação</h1>
             <p>Encontre a franquia mais proxima de voce e comece a utilizar o sistema de vendas que vai acelerar o seu
-                negocio.</p>
+                negócio.</p>
         </div>
+        <div class="franchises-filter">
+            <span class="franchises-filter-label">Filtre por:</span>
 
-        <div class="franchises-controls">
             <?php if (!empty($states)): ?>
             <select class="franchises-select" name="franchise_state" id="franchise_state">
                 <?php foreach ($states as $state): ?>
@@ -55,11 +101,28 @@ if (count($states) > 1) {
                 <?php endforeach; ?>
             </select>
             <?php endif; ?>
+        </div>
+        <div class="franchises-controls">
+            <div class="franchises-grid">
+                <div class="franchises-list-column">
+                    <div class="franchises-cards" id="franchises-cards">
+                        <?php foreach ($map_locations as $location): ?>
+                        <article class="franchise-card" data-state="<?php echo esc_attr($location['state']); ?>">
+                            <h2 class="franchise-card-title"><?php echo esc_html($location['name']); ?></h2>
+                            <p class="franchise-card-location">
+                                <?php echo esc_html(trim(($location['city'] ?: 'Cidade nao informada') . ' - ' . ($location['state'] ?: 'Estado nao informado'))); ?>
+                            </p>
+                        </article>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
 
-            <div class="franchises-map-wrapper">
-                <p class="franchises-map-description">O mapa abaixo utiliza latitude e longitude para marcar as
-                    franquias. Dois pontos padrao foram adicionados para teste.</p>
-                <div id="franchises-map" data-locations="<?php echo esc_attr(wp_json_encode($map_locations)); ?>"></div>
+                <div class="franchises-map-column">
+                    <div class="franchises-map-wrapper">
+                        <div id="franchises-map"
+                            data-locations="<?php echo esc_attr(wp_json_encode($map_locations)); ?>"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

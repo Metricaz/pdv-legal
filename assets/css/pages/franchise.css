@@ -4,45 +4,142 @@
 
 .franchises-hero {
     max-width: 1220px;
-    margin: 0 auto;
+    margin: 20px auto;
     display: grid;
-    gap: 32px;
+    gap: 40px;
 }
 
-.franchises-controls {
+.franchises-hero .header-text {
     display: grid;
     gap: 20px;
 }
 
+.franchises-hero .header-text h1 {
+    color: var(--color-primary-dark);
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 400;
+    line-height: 1;
+    text-align: left;
+}
+
+.franchises-hero .header-text p {
+    max-width: 860px;
+    color: var(--color-primary-dark);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.franchises-grid {
+    display: grid;
+    grid-template-columns: minmax(340px, 520px) minmax(320px, 1fr);
+    gap: 36px;
+    align-items: start;
+}
+
+.franchises-list-column {
+    display: grid;
+    gap: 28px;
+    height: 600px;
+}
+
+.franchises-filter {
+    display: grid;
+    gap: 12px;
+}
+
+.franchises-filter-label {
+    color: var(--color-primary-dark);
+    font-size: 20px;
+    font-weight: 700;
+}
+
 .franchises-select {
     width: 100%;
-    max-width: 360px;
+    max-width: 220px;
     min-height: 52px;
-    border: 1px solid #d7dce5;
+    border: 1px solid var(--color-primary-dark);
     border-radius: 14px;
     padding: 0 16px;
     background: #fff;
-    color: #0f1f4b;
+    color: var(--color-primary-dark);
     font-size: 16px;
 }
 
-.franchises-map-wrapper {
+.franchises-cards {
+    max-height: 720px;
+    padding-right: 18px;
+    padding-bottom: 20px;
+    overflow-y: auto;
     display: grid;
-    gap: 12px;
-    margin-bottom: 20px;
+    gap: 18px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary-dark) #eef3f8;
 }
 
-.franchises-map-description {
-    color: #53627c;
-    font-size: 14px;
+.franchise-card {
+    padding: 34px 36px;
+    border-radius: 20px;
+    background: #fff;
+    border: var(--color-primary-dark) 1px solid;
+    box-shadow: 10px 10px 10px rgba(15, 31, 75, 0.14);
+}
+
+.franchise-card-title {
+    margin-bottom: 14px;
+    color: var(--color-primary-dark);
+    font-size: clamp(28px, 2.2vw, 36px);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.franchise-card-location {
+    color: var(--color-primary-dark);
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.franchise-card.is-hidden {
+    display: none;
+}
+
+.franchises-map-column {
+    position: sticky;
+    top: 120px;
+    height: 600px;
+}
+
+.franchises-map-wrapper {
+    height: min(72vh, 760px);
+    min-height: 600px;
 }
 
 #franchises-map {
     width: 100%;
-    min-height: 460px;
+    height: 100%;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(15, 31, 75, 0.12);
+}
+
+@media (max-width: 1024px) {
+    .franchises-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .franchises-map-column {
+        position: static;
+    }
+
+
+    .franchises-map-wrapper {
+        height: 460px;
+        min-height: 460px;
+    }
+
+    .franchises-cards {
+        max-height: none;
+        padding-right: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -50,7 +147,27 @@
         padding: 96px 16px 64px;
     }
 
-    #franchises-map {
+    .franchises-hero {
+        gap: 28px;
+    }
+
+    .franchise-card {
+        padding: 28px 24px;
+
+        box-shadow: none;
+    }
+
+
+    .franchise-card-title {
+        font-size: 24px;
+    }
+
+    .franchise-card-location {
+        font-size: 16px;
+    }
+
+    .franchises-map-wrapper {
+        height: 360px;
         min-height: 360px;
     }
 }
