@@ -85,7 +85,7 @@ if (count($states) > 1) {
 <main class="franchises-page">
     <section class="franchises-hero">
         <div class="header-text">
-            <h1>Franquias Web Automação</h1>
+            <h1>Franquias PDV Legal</h1>
             <p>Encontre a franquia mais proxima de voce e comece a utilizar o sistema de vendas que vai acelerar o seu
                 negócio.</p>
         </div>
