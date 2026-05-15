@@ -3,19 +3,24 @@
         <div class="footer-grid">
             <!-- Coluna 1 - Logo e Redes Sociais -->
             <div class="footer-col footer-col-brand">
-                <img class="footer-logo" src="<?php echo get_template_directory_uri(); ?>/assets/icons/logo-blue.svg" alt="Logo PDV Legal" />
+                <img class="footer-logo" src="<?php echo get_template_directory_uri(); ?>/assets/icons/logo-blue.svg"
+                    alt="Logo PDV Legal" />
                 <div class="footer-social">
                     <a href="#" class="social-link" aria-label="Facebook">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/footer/social-facebook.svg" alt="Facebook" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/footer/social-facebook.svg"
+                            alt="Facebook" />
                     </a>
                     <a href="#" class="social-link" aria-label="Instagram">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/footer/social-instagram.svg" alt="Instagram" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/footer/social-instagram.svg"
+                            alt="Instagram" />
                     </a>
                     <a href="#" class="social-link" aria-label="Twitter">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/footer/social-twitter.svg" alt="Twitter" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/footer/social-twitter.svg"
+                            alt="Twitter" />
                     </a>
                     <a href="#" class="social-link" aria-label="LinkedIn">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/footer/social-linkedIn.svg" alt="LinkedIn" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/footer/social-linkedIn.svg"
+                            alt="LinkedIn" />
                     </a>
                 </div>
             </div>
@@ -68,6 +73,7 @@
                 <ul class="footer-links">
                     <li><a href="#">Sobre o PDV Legal</a></li>
                     <li><a href="#">Contato</a></li>
+                    <li><a href="/legal-content">Legal</a></li>
                 </ul>
             </div>
         </div>
@@ -77,4 +83,3 @@
         <p class="copy-right">Copyright © 2026 PDV Legal | All Rights Reserved.</p>
     </div>
 </footer>
-
