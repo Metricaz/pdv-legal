@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/resale.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/about.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/legal-content.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/franchise.css">
     <?php
       if(get_post_field('post_name', get_post()) === 'solutions') {
         echo '<script type="text/javascript" src="'.get_template_directory_uri().'/assets/js/solutions.js"></script>';
@@ -36,6 +37,8 @@
         echo '<script type="text/javascript" src="'.get_template_directory_uri().'/assets/js/integrations.js"></script>';
       } else if(get_post_field('post_name', get_post()) === 'legal-content') {
         echo '<script type="text/javascript" src="'.get_template_directory_uri().'/assets/js/legal-content.js"></script>';
+      } else if(get_post_field('post_name', get_post()) === 'franchises') {
+        echo '<script type="text/javascript" src="'.get_template_directory_uri().'/assets/js/franchise.js"></script>';
       } else {
         echo '<script type="text/javascript" src="'.get_template_directory_uri().'/assets/js/main.js"></script>';
       }
